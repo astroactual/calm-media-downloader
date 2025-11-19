@@ -1,0 +1,10 @@
+{
+  "name": "The Calm Site Media Downloader",
+  "description": "Download media from the media player webpage",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "media-downloader.html",
+    "default_icon": "media-downloader-icon.png"
+  }
+}
