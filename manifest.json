@@ -3,8 +3,15 @@
   "description": "Download media from the media player webpage",
   "version": "1.0",
   "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "media-downloader.html",
     "default_icon": "media-downloader-icon.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://thecalm.site/*"],
+      "js": ["content.js"]
+    }
+  ]
 }
