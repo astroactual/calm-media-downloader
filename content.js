@@ -1,19 +1,27 @@
-function renderReadingTime(loginPanel) {
-  // If we weren't provided a main, we don't need to render anything.
-  if (!loginPanel) {
+function renderButton(masterSection) {
+  // If we weren't provided #TODO FIND SOURCE, we don't need to render anything.
+  if (!masterSection) {
     return;
   }
 
-  const badge = document.createElement("button");
-  // TODO: Add button styles similar to others on page
-  badge.classList.add("btn", "btn-dark");
+  //create button
+  const button = document.createElement("button");
+  //Button styles similar to others on page
+  button.classList.add("btn", "btn-dark");
+  //content of button
+  button.textContent = `Download`;
 
-  badge.textContent = `Download`;
+  //Select button location
+  const buttonLocation = masterSection.querySelector("h1");
+  //insert button
+  buttonLocation.insertAdjacentElement("afterend", button);
 
-  // Support for API reference docs
-  const downloadButton = loginPanel.querySelector(".col-sm-7");
-
-  downloadButton.insertAdjacentElement("afterbegin", badge);
+  //button opens link
+  button.addEventListener("click", function () {
+    // Open the link in a new tab
+    window.open("https://www.google.com", "_blank");
+  });
 }
 
-renderReadingTime(document.querySelector(".login-panel"));
+//render the button
+renderButton(document.querySelector("body"));
