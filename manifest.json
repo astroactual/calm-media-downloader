@@ -15,5 +15,11 @@
       "matches": ["https://thecalm.site/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "@calm-media-downloader",
+    "strict_min_version": "58.0"
+  }
+}
 }
