@@ -6,7 +6,7 @@ function renderButton(masterSection) {
 
   //create button w/ styles
   const button = document.createElement("button");
-  button.style.marginTop = "-4px";
+  //button.style.marginTop = "-4px";
   button.style.borderRadius = "6px";
   button.style.height = "30px";
   button.style.lineHeight = "30px";
