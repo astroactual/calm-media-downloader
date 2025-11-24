@@ -29,6 +29,11 @@ function renderButton(masterSection) {
       window.alert('Please open a video player before clicking "Download"');
       return;
     }
+
+    //TODO gather media title to variable
+
+    //TODO copy media title to clipboard
+
     //post src in console, just cause why not
     console.log("Video Source:", videoElement.src);
     //open link in new blank tab
