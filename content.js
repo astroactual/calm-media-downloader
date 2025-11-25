@@ -30,7 +30,7 @@ function renderButton(masterSection) {
       return;
     }
 
-    //TODO gather media title to variable
+    //TODO gather media title to variable, differences if in a show or movie
 
     //TODO copy media title to clipboard
 
