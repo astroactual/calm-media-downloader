@@ -30,10 +30,33 @@ function renderButton(masterSection) {
       return;
     }
 
-    //TODO gather media title to variable, differences if in a show or movie
+    
 
-    //TODO copy media title to clipboard
+    //check if browser is firefox. If it is, copy name to clipboard
+    if (navigator.userAgent.match(/firefox|fxios/i)) {
 
+      //Collect video naming data. First check if its a show or movie
+      const seriesTitleSection = document.querySelector('.series-title')
+
+      if (seriesTitleSection){
+        const title = document.getElementsByClassName('series-title')[0];
+        const titleContent = title.textContent;
+        const seq = document.getElementsByClassName('seq')[0];
+        const seqContent = seq.textContent;
+        const epTitle = document.getElementsByClassName('episode-title')[0];
+        const epTitleContent = epTitle.textContent;
+        const fullTitle = titleContent + '-' + seqContent + '-' + epTitleContent;
+       
+        navigator.clipboard.writeText(fullTitle);
+      }
+      else {
+        const title = document.getElementsByClassName('small-title')[0];
+        const titleContent = title.textContent;
+        
+        navigator.clipboard.writeText(titleContent);
+      }
+    }
+    
     //post src in console, just cause why not
     console.log("Video Source:", videoElement.src);
     //open link in new blank tab
